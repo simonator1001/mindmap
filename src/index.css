@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.react-flow__handle {
+  width: 8px;
+  height: 8px;
+  background-color: #3b82f6;
+}
+
+.react-flow__handle:hover {
+  background-color: #2563eb;
+}
+
+.react-flow__edge-path {
+  stroke: #94a3b8;
+  stroke-width: 2;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #3b82f6;
+}
+
+.react-flow__edge.animated .react-flow__edge-path {
+  stroke-dasharray: 5;
+  animation: dashdraw 0.5s linear infinite;
+}
+
+@keyframes dashdraw {
+  from {
+    stroke-dashoffset: 10;
+  }
+}
+
+.react-flow__controls {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  border-radius: 8px;
+}
+
+.react-flow__controls button {
+  border-radius: 4px;
+  padding: 4px;
+  margin: 2px;
+}
+
+.react-flow__controls button:hover {
+  background-color: #f3f4f6;
+}
+
+.hexagon {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
